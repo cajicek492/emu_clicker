@@ -1,0 +1,1 @@
+const Emu = document.getElementById(Emu);
