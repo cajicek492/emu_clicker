@@ -1,8 +1,15 @@
-#Emu{
+#emu{
     max-width: 250px;
     position: absolute;
     top: 275px;
     left: 475px;
+}
+#counter{
+    background-color: pink;
+    border: solid black 2px;
+    border-radius: 25px;
+    padding: 4px;
+    text-align: center;
 }
 .item1{ grid-area: Hlava;}
 .item2{ grid-area: Prouzek1;}
@@ -35,4 +42,9 @@ background-image: url("./Background_Wonder_Stage_Halloween.webp");
 background-repeat: no-repeat;
 background-size: cover;
 padding: 150px;
+}
+button{
+    background-color: aquamarine;
+    width: 1em;
+    height: 1em;
 }
