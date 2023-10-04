@@ -1,40 +1,40 @@
 #emu{
-    max-width: 250px;
-    position: absolute;
-    top: 275px;
-    left: 475px;
+    max-width: 300px;
+   cursor: pointer;
 }
 #counter{
-    background-color: pink;
-    border: solid black 2px;
-    border-radius: 25px;
     padding: 4px;
     text-align: center;
 }
-.item1{ grid-area: Hlava;}
-.item2{ grid-area: Prouzek1;}
-.item3{ grid-area: Emu;}
+.item1{ grid-area: Hlava;;}
+/*.item2{ grid-area: Prouzek1;}*/
+.item3{ grid-area: Emu;
+        display: flex;
+        justify-content: center;
+   }
 .item4{ grid-area: Prouzek2;}
 #prouzky{
     display: grid;
     grid-template-areas:
     'Hlava Hlava Hlava Hlava Hlava'
-    'Prouzek1 Emu Emu Emu Emu'
-    'Prouzek1 Emu Emu Emu Emu'
+    'Emu Emu Emu Emu Emu'
+    'Emu Emu Emu Emu Emu'
     'Prouzek2 Prouzek2 Prouzek2 Prouzek2 Prouzek2';
-    gap: 15px;
+    gap: 5px;
   background-color: #2196F3;
   padding: 10px;
+  
 }
 #prouzky > div{
-    background-color: red;
+    background-color: pink;
     border: 5px black solid;
     text-align: center;
     padding: 100px;
     font-size: 35px;
 }
 #prouzky > .item1{
-    padding: 75px;
+    padding: 25px;
+    font-size: 48px;
 }
 
 #prouzky > .item3{
@@ -43,8 +43,7 @@ background-repeat: no-repeat;
 background-size: cover;
 padding: 150px;
 }
-button{
-    background-color: aquamarine;
-    width: 1em;
-    height: 1em;
+#upgrades{
+    display: flex;
+    justify-content: space-evenly;
 }
