@@ -4,6 +4,8 @@ const basicEmu = document.getElementById("basicEmu"); // upgrade obrazek
 const advancedEmu = document.getElementById("advancedEmu"); // upgrade obrazek
 const superiorEmu = document.getElementById("superiorEmu");
 const priceCounterBasic = document.getElementById("priceCounterBasic");
+const priceCounterAdvanced = document.getElementById("priceCounterAdvanced");
+const priceCounterSuperior = document.getElementById("priceCounterSuperior");
 
 let numberOfEmus = 0;
 let emusPerClick = 1;
@@ -38,6 +40,8 @@ advancedEmu.onclick = () => {
     if(numberOfEmus >= costOfAdvacedUpgrade){
         console.log("it works maybe");
         numberOfEmus -= costOfAdvacedUpgrade;
+        costOfAdvacedUpgrade += 100;
+        priceCounterAdvanced.innerText = "Emu: " + costOfAdvacedUpgrade;
         counter.innerText = "Emus: " + numberOfEmus;
         emuAutoClick += 1;
         clearInterval(emuAutoInterval);
@@ -52,9 +56,11 @@ superiorEmu.onclick = () => {
     if(numberOfEmus >= costOfSuperiorUpgrade){
         console.log("budeme na prime");
         numberOfEmus -= costOfSuperiorUpgrade;
+        costOfSuperiorUpgrade += 1000;
+        priceCounterSuperior.innerText = "Quack Emu: " + costOfSuperiorUpgrade;
         counter.innerText = "Emus: " + numberOfEmus;
         emuSuperiorAutoClick += 10;
-
+        clearInterval(emuSuperiorAutoInterval);
         emuSuperiorAutoInterval =setInterval(() => {
             numberOfEmus += emuSuperiorAutoClick;
             counter.innerText = "Emus: " + numberOfEmus;

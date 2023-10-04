@@ -58,7 +58,7 @@ padding: 150px;
     margin: auto;
     max-width: 450px;
 }
-#basicEmu{
+#basicEmu, #advancedEmu, #superiorEmu{
     border-radius: 25px;
     border: solid black 1px;
 }
