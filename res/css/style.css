@@ -1,6 +1,10 @@
+body{
+    background-color: #2196F3;
+}
 #emu{
     max-width: 300px;
    cursor: pointer;
+   z-index: 99;
 }
 #counter{
     padding: 4px;
@@ -46,4 +50,7 @@ padding: 150px;
 #upgrades{
     display: flex;
     justify-content: space-evenly;
+    flex-direction: column;
+    margin: auto;
+    max-width: 450px;
 }

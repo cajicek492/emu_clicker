@@ -21,6 +21,7 @@ basicEmu.onclick = () => {
     if(numberOfEmus >= costOfBasicUpgrade){
         console.log("upgrade bought");
         numberOfEmus -= costOfBasicUpgrade;
+        costOfBasicUpgrade *= 2;
         emusPerClick++;
         counter.innerText = "Emus: " + numberOfEmus;
     }
@@ -45,3 +46,6 @@ function hackerMan () {
     counter.innerText = "Emus: " + numberOfEmus;
 }
 hackerMan();
+window.onload = () => {
+    alert("Halllo im Emu Otori letss WONDERHOY");
+}
