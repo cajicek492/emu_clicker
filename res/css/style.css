@@ -1,10 +1,12 @@
 body{
     background-color: #2196F3;
+    font-family: 'Pixelify Sans', cursive;
 }
 #emu{
     max-width: 300px;
    cursor: pointer;
    z-index: 99;
+   user-select: none;
 }
 #counter{
     padding: 4px;
@@ -47,10 +49,20 @@ background-repeat: no-repeat;
 background-size: cover;
 padding: 150px;
 }
+
+/*sekce pro upgrady*/
 #upgrades{
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
     margin: auto;
     max-width: 450px;
+}
+#basicEmu{
+    border-radius: 25px;
+    border: solid black 1px;
+}
+/*pocitace cen*/
+#priceCounterBasic{
+    font-family: 'Pixelify Sans';
 }

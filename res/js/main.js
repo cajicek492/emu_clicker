@@ -1,14 +1,16 @@
-const emu = document.getElementById("emu");
+const emu = document.getElementById("emu"); // emu na click
 const counter = document.getElementById("counter");
-const basicEmu = document.getElementById("basicEmu");
+const basicEmu = document.getElementById("basicEmu"); // upgrade obrazek
 const advancedEmu = document.getElementById("advancedEmu");
+const priceCounterBasic = document.getElementById("priceCounterBasic");
 
 let numberOfEmus = 0;
 let emusPerClick = 1;
 let emuAutoClick = 0;
 let emuAutoInterval;
-let costOfBasicUpgrade = 20;
+let costOfBasicUpgrade = 20; // basic upgrade je na click
 let costOfAdvacedUpgrade = 100;
+
 
 emu.onclick = () => {
     console.log("click");
@@ -21,8 +23,9 @@ basicEmu.onclick = () => {
     if(numberOfEmus >= costOfBasicUpgrade){
         console.log("upgrade bought");
         numberOfEmus -= costOfBasicUpgrade;
-        costOfBasicUpgrade *= 2;
+        costOfBasicUpgrade += 20;
         emusPerClick++;
+        priceCounterBasic.innerText = "Click upgrade: " + costOfBasicUpgrade;
         counter.innerText = "Emus: " + numberOfEmus;
     }
 }
