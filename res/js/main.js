@@ -114,9 +114,9 @@ function hackerMan () {
     numberOfEmus += 25000;
     counter.innerText = "Emus: " + numberOfEmus;
 }
-hackerMan();
+
 window.onload = () => {
-    alert("Halllo im Emu Otori letss WONDERHOY");
+    alert("Halllo im Emu Otori letss WONDERHOY / (pro cheaty napsat hackerMan())");
     
 }
 
