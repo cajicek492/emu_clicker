@@ -22,6 +22,7 @@ let emuUltimateAutoClick = 0;
 let emuAutoInterval;
 let emuSuperiorAutoInterval;
 let emuUltimateAutoInterval;
+let upgradeCheck;
 let costOfBasicUpgrade = 20; // basic upgrade je na click
 let costOfAdvacedUpgrade = 100;
 let costOfSuperiorUpgrade = 1000;
@@ -98,6 +99,10 @@ ultimateEmu.onclick = () => {
         priceCounterUltimate.innerText = "Tea party Emu: " + costOfUltimateUpgrade;
         counter.innerText = "Emus: " + numberOfEmus;
         emuUltimateAutoClick += 100;
+        clearInterval(upgradeCheck);
+        upgradeCheck = setInterval(() => {
+            changeSrc();
+        },1000);
         clearInterval(emuUltimateAutoInterval);
         emuUltimateAutoInterval = setInterval(() => {
             numberOfEmus += emuUltimateAutoClick;
@@ -106,10 +111,18 @@ ultimateEmu.onclick = () => {
     }
 }
 function hackerMan () {
-    numberOfEmus += 10000;
+    numberOfEmus += 25000;
     counter.innerText = "Emus: " + numberOfEmus;
 }
 hackerMan();
 window.onload = () => {
     alert("Halllo im Emu Otori letss WONDERHOY");
+    
 }
+
+function changeSrc() {
+ if(ultimateEmuLvl > 0) {
+    emu.src = "./res/img/emu_dance.gif";
+ }
+}
+

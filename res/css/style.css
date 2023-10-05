@@ -4,6 +4,7 @@ body{
 }
 #emu{
     max-width: 300px;
+    width: 300px;
    cursor: pointer;
    z-index: 99;
    user-select: none;
@@ -44,7 +45,7 @@ body{
 }
 
 #prouzky > .item3{
-background-image: url("./Background_Wonder_Stage_Halloween.webp");
+background-image: url("./Background_Wonder_Stage_Halloween.webp"); /*img v css protoze to jinak protestovalo*/
 background-repeat: no-repeat;
 background-size: cover;
 padding: 150px;
@@ -61,6 +62,7 @@ padding: 150px;
 #basicEmu, #advancedEmu, #superiorEmu, #ultimateEmu{
     border-radius: 25px;
     border: solid black 1px;
+    cursor: pointer;
 }
 /*pocitace cen*/
 #priceCounterBasic{
