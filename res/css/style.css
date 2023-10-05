@@ -249,6 +249,7 @@ padding: 75px;
         font-size: smaller;
     }
 }
+
 @media only screen and (max-width: 600px) {
     #emu{
         max-width: 150px;
@@ -277,7 +278,7 @@ padding: 75px;
         'Prouzek2 Prouzek2 Prouzek2 Prouzek2 Prouzek2';
         gap: 5px;
       background-color: #2196F3;
-      padding: 10px;
+      padding: 5px;
       
     }
     #prouzky > div{
@@ -305,7 +306,8 @@ padding: 75px;
         justify-content: space-evenly;
         flex-direction: column;
         margin: auto;
-        max-width: 200px;
+        max-width: 150px;
+        width: 100%;
         user-select: none;
     }
     #basicEmu, #advancedEmu, #superiorEmu, #ultimateEmu{
