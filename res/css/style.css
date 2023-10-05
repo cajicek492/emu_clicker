@@ -5,6 +5,16 @@ body{
     background-color: #2196F3;
     font-family: 'Pixelify Sans', cursive;
 }
+#signature{
+    user-select: text;
+}
+#selfpromo{
+    text-decoration: none;
+    color: black;
+}
+#selfpromo:hover{
+    text-decoration: underline;
+}
 @media only screen and (min-width: 1200px) {
 #emu{
     max-width: 300px;
@@ -34,7 +44,7 @@ body{
     gap: 5px;
   background-color: #2196F3;
   padding: 10px;
-  
+  user-select: none;
 }
 #prouzky > div{
     background-color: pink;
@@ -62,6 +72,7 @@ padding: 75px;
     flex-direction: column;
     margin: auto;
     max-width: 450px;
+    user-select: none;
 }
 #basicEmu, #advancedEmu, #superiorEmu, #ultimateEmu{
     border-radius: 25px;
@@ -139,6 +150,7 @@ padding: 75px;
         flex-direction: column;
         margin: auto;
         max-width: 400px;
+        user-select: none;
     }
     #basicEmu, #advancedEmu, #superiorEmu, #ultimateEmu{
         border-radius: 25px;
@@ -216,6 +228,7 @@ padding: 75px;
         flex-direction: column;
         margin: auto;
         max-width: 300px;
+        user-select: none;
     }
     #basicEmu, #advancedEmu, #superiorEmu, #ultimateEmu{
         border-radius: 25px;
@@ -293,6 +306,7 @@ padding: 75px;
         flex-direction: column;
         margin: auto;
         max-width: 275px;
+        user-select: none;
     }
     #basicEmu, #advancedEmu, #superiorEmu, #ultimateEmu{
         border-radius: 25px;
