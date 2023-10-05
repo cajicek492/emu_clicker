@@ -305,7 +305,7 @@ padding: 75px;
         justify-content: space-evenly;
         flex-direction: column;
         margin: auto;
-        max-width: 275px;
+        max-width: 200px;
         user-select: none;
     }
     #basicEmu, #advancedEmu, #superiorEmu, #ultimateEmu{
