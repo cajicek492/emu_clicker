@@ -58,11 +58,20 @@ padding: 150px;
     margin: auto;
     max-width: 450px;
 }
-#basicEmu, #advancedEmu, #superiorEmu{
+#basicEmu, #advancedEmu, #superiorEmu, #ultimateEmu{
     border-radius: 25px;
     border: solid black 1px;
 }
 /*pocitace cen*/
 #priceCounterBasic{
     font-family: 'Pixelify Sans';
+}
+#basicEmuLvlBox{
+    font-size: smaller;
+}
+#advancedEmuLvlBox{
+    font-size: smaller;
+}
+#superiorEmuLvlBox{
+    font-size: smaller;
 }
