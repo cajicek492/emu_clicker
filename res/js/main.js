@@ -12,7 +12,7 @@ const basicEmuLvlBox = document.getElementById("basicEmuLvlBox"); // disply lvl
 const advancedEmuLvlBox = document.getElementById("advancedEmuLvlBox"); 
 const superiorEmuLvlBox = document.getElementById("superiorEmuLvlBox"); 
 const ultimateEmuLvlBox = document.getElementById("ultimateEmuLvlBox"); 
-const wonderhoy = new Audio("./res/img/wonderhoy.mp3");
+const wonderhoy = new Audio("./res/audio/wonderhoy.mp3");
 
 
 let numberOfEmus = 0;
