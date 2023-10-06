@@ -12,6 +12,7 @@ const basicEmuLvlBox = document.getElementById("basicEmuLvlBox"); // disply lvl
 const advancedEmuLvlBox = document.getElementById("advancedEmuLvlBox"); 
 const superiorEmuLvlBox = document.getElementById("superiorEmuLvlBox"); 
 const ultimateEmuLvlBox = document.getElementById("ultimateEmuLvlBox"); 
+const wonderhoy = new Audio("./res/img/wonderhoy.mp3");
 
 
 let numberOfEmus = 0;
@@ -43,6 +44,7 @@ emu.onclick = () => {
 basicEmu.onclick = () => {
     if(numberOfEmus >= costOfBasicUpgrade){
         console.log("upgrade bought");
+        wonderhoy.play();
         numberOfEmus -= costOfBasicUpgrade;
         costOfBasicUpgrade += 20;
         basicEmuLvl++;
@@ -56,6 +58,7 @@ basicEmu.onclick = () => {
 advancedEmu.onclick = () => {
     if(numberOfEmus >= costOfAdvacedUpgrade){
         console.log("it works maybe");
+        wonderhoy.play();
         numberOfEmus -= costOfAdvacedUpgrade;
         costOfAdvacedUpgrade += 100;
         advancedEmuLvl++;
@@ -74,6 +77,7 @@ advancedEmu.onclick = () => {
 superiorEmu.onclick = () => {
     if(numberOfEmus >= costOfSuperiorUpgrade){
         console.log("budeme na prime");
+        wonderhoy.play();
         numberOfEmus -= costOfSuperiorUpgrade;
         costOfSuperiorUpgrade += 1000;
         superiorEmuLvl++;
@@ -92,6 +96,7 @@ superiorEmu.onclick = () => {
 ultimateEmu.onclick = () => {
     if(numberOfEmus >= costOfUltimateUpgrade){
         console.log("perfection");
+        wonderhoy.play();
         numberOfEmus -= costOfUltimateUpgrade;
         costOfUltimateUpgrade += 5000;
         ultimateEmuLvl++;
