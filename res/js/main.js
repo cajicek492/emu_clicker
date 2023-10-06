@@ -46,7 +46,7 @@ basicEmu.onclick = () => {
         console.log("upgrade bought");
         wonderhoy.play();
         numberOfEmus -= costOfBasicUpgrade;
-        costOfBasicUpgrade += 20;
+        costOfBasicUpgrade += 40;
         basicEmuLvl++;
         emusPerClick++;
         basicEmuLvlBox.innerText = "lvl: " + basicEmuLvl;
@@ -60,7 +60,7 @@ advancedEmu.onclick = () => {
         console.log("it works maybe");
         wonderhoy.play();
         numberOfEmus -= costOfAdvacedUpgrade;
-        costOfAdvacedUpgrade += 100;
+        costOfAdvacedUpgrade += 200;
         advancedEmuLvl++;
         advancedEmuLvlBox.innerText = "lvl: " + advancedEmuLvl;
         priceCounterAdvanced.innerText = "Emu: " + costOfAdvacedUpgrade;
