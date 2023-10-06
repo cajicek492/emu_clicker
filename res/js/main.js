@@ -13,6 +13,7 @@ const advancedEmuLvlBox = document.getElementById("advancedEmuLvlBox");
 const superiorEmuLvlBox = document.getElementById("superiorEmuLvlBox"); 
 const ultimateEmuLvlBox = document.getElementById("ultimateEmuLvlBox"); 
 const wonderhoy = new Audio("./res/audio/wonderhoy.mp3");
+const titul = document.getElementById("titul"); 
 
 
 let numberOfEmus = 0;
@@ -24,6 +25,7 @@ let emuAutoInterval;
 let emuSuperiorAutoInterval;
 let emuUltimateAutoInterval;
 let upgradeCheck;
+let cookieRefresh; // pocet susenek v karte
 let costOfBasicUpgrade = 20; // basic upgrade je na click
 let costOfAdvacedUpgrade = 100;
 let costOfSuperiorUpgrade = 1000;
@@ -130,4 +132,12 @@ function changeSrc() {
     emu.src = "./res/img/emu_dance.gif";
  }
 }
-
+// pocet susenek v karte
+function titleCookie() {
+    titul.innerText = numberOfEmus + " Emus - Emu Otori Clicker";
+    clearInterval(cookieRefresh);
+    cookieRefresh = setInterval(() => {
+        titleCookie();
+    },750)
+}
+titleCookie();
