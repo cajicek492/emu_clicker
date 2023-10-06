@@ -1,10 +1,76 @@
 *{
     box-sizing: border-box;
 }
+
 body{
     background-color: #2196F3;
     font-family: 'Pixelify Sans', cursive;
 }
+
+#emu{
+   cursor: pointer;
+   z-index: 99;
+   user-select: none;
+}
+
+#counter{
+    padding: 4px;
+    text-align: center;
+}
+
+.item1{ grid-area: Hlava;;}
+
+#item3{ grid-area: Emu;
+        display: flex;
+        justify-content: center;
+   }
+
+.item4{ grid-area: Prouzek2;}
+
+#prouzky{
+    display: grid;
+    grid-template-areas:
+    'Hlava Hlava Hlava Hlava Hlava'
+    'Emu Emu Emu Emu Emu'
+    'Emu Emu Emu Emu Emu'
+    'Prouzek2 Prouzek2 Prouzek2 Prouzek2 Prouzek2';
+    gap: 5px;
+  background-color: #2196F3;
+  padding: 5px;
+  
+}
+#prouzky > div{
+    background-color: pink;
+    border: 5px black solid;
+    text-align: center;
+}
+#prouzky > #item3{
+    background-image: url("./Background_Wonder_Stage_Halloween.webp"); /*img v css protoze to jinak protestovalo*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+    #upgrades{
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        margin: auto;
+        width: 100%;
+        user-select: none;
+    }
+    #basicEmu, #advancedEmu, #superiorEmu, #ultimateEmu{
+        border-radius: 25px;
+        border: solid black 1px;
+        cursor: pointer;
+    }
+    #basicEmuLvlBox{
+        font-size: smaller;
+    }
+    #advancedEmuLvlBox{
+        font-size: smaller;
+    }
+    #superiorEmuLvlBox{
+        font-size: smaller;
+    }
 #signature{
     user-select: text;
 }
@@ -15,42 +81,16 @@ body{
 #selfpromo:hover{
     text-decoration: underline;
 }
+
+/*responzivita*/
+
 @media only screen and (min-width: 1200px) {
 #emu{
     max-width: 300px;
     width: 300px;
-   cursor: pointer;
-   z-index: 99;
-   user-select: none;
-}
-#counter{
-    padding: 4px;
-    text-align: center;
-}
-.item1{ grid-area: Hlava;;}
-/*.item2{ grid-area: Prouzek1;}*/
-#item3{ grid-area: Emu;
-        display: flex;
-        justify-content: center;
-   }
-.item4{ grid-area: Prouzek2;}
-#prouzky{
-    display: grid;
-    grid-template-areas:
-    'Hlava Hlava Hlava Hlava Hlava'
-    'Emu Emu Emu Emu Emu'
-    'Emu Emu Emu Emu Emu'
-    'Prouzek2 Prouzek2 Prouzek2 Prouzek2 Prouzek2';
-    gap: 5px;
-  background-color: #2196F3;
-  padding: 10px;
-  user-select: none;
 }
 #prouzky > div{
-    background-color: pink;
-    border: 5px black solid;
-    text-align: center;
-    padding: 100px;
+    padding: 75px;
     font-size: 35px;
 }
 #prouzky > .item1{
@@ -59,75 +99,20 @@ body{
 }
 
 #prouzky > #item3{
-background-image: url("./Background_Wonder_Stage_Halloween.webp"); /*img v css protoze to jinak protestovalo*/
-background-repeat: no-repeat;
-background-size: cover;
 padding: 75px;
 }
 
 /*sekce pro upgrady*/
 #upgrades{
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
-    margin: auto;
     max-width: 450px;
-    user-select: none;
-}
-#basicEmu, #advancedEmu, #superiorEmu, #ultimateEmu{
-    border-radius: 25px;
-    border: solid black 1px;
-    cursor: pointer;
-}
-/*pocitace cen*/
-#priceCounterBasic{
-    font-family: 'Pixelify Sans';
-}
-#basicEmuLvlBox{
-    font-size: smaller;
-}
-#advancedEmuLvlBox{
-    font-size: smaller;
-}
-#superiorEmuLvlBox{
-    font-size: smaller;
 }
 }
 @media only screen and (max-width: 1199px){
     #emu{
         max-width: 250px;
         width: 250px;
-       cursor: pointer;
-       z-index: 99;
-       user-select: none;
-    }
-    #counter{
-        padding: 4px;
-        text-align: center;
-    }
-    .item1{ grid-area: Hlava;;}
-    /*.item2{ grid-area: Prouzek1;}*/
-    #item3{ grid-area: Emu;
-            display: flex;
-            justify-content: center;
-       }
-    .item4{ grid-area: Prouzek2;}
-    #prouzky{
-        display: grid;
-        grid-template-areas:
-        'Hlava Hlava Hlava Hlava Hlava'
-        'Emu Emu Emu Emu Emu'
-        'Emu Emu Emu Emu Emu'
-        'Prouzek2 Prouzek2 Prouzek2 Prouzek2 Prouzek2';
-        gap: 5px;
-      background-color: #2196F3;
-      padding: 10px;
-      
     }
     #prouzky > div{
-        background-color: pink;
-        border: 5px black solid;
-        text-align: center;
         padding: 50px;
         font-size: 26px;
     }
@@ -137,75 +122,20 @@ padding: 75px;
     }
     
     #prouzky > #item3{
-    background-image: url("./Background_Wonder_Stage_Halloween.webp"); /*img v css protoze to jinak protestovalo*/
-    background-repeat: no-repeat;
-    background-size: cover;
     padding: 50px;
     }
     
     /*sekce pro upgrady*/
     #upgrades{
-        display: flex;
-        justify-content: space-evenly;
-        flex-direction: column;
-        margin: auto;
         max-width: 400px;
-        user-select: none;
-    }
-    #basicEmu, #advancedEmu, #superiorEmu, #ultimateEmu{
-        border-radius: 25px;
-        border: solid black 1px;
-        cursor: pointer;
-    }
-    /*pocitace cen*/
-    #priceCounterBasic{
-        font-family: 'Pixelify Sans';
-    }
-    #basicEmuLvlBox{
-        font-size: smaller;
-    }
-    #advancedEmuLvlBox{
-        font-size: smaller;
-    }
-    #superiorEmuLvlBox{
-        font-size: smaller;
     }
 }
 @media only screen and (max-width: 992px){
     #emu{
         max-width: 200px;
         width: 200px;
-       cursor: pointer;
-       z-index: 99;
-       user-select: none;
-    }
-    #counter{
-        padding: 4px;
-        text-align: center;
-    }
-    .item1{ grid-area: Hlava;;}
-    /*.item2{ grid-area: Prouzek1;}*/
-    #item3{ grid-area: Emu;
-            display: flex;
-            justify-content: center;
-       }
-    .item4{ grid-area: Prouzek2;}
-    #prouzky{
-        display: grid;
-        grid-template-areas:
-        'Hlava Hlava Hlava Hlava Hlava'
-        'Emu Emu Emu Emu Emu'
-        'Emu Emu Emu Emu Emu'
-        'Prouzek2 Prouzek2 Prouzek2 Prouzek2 Prouzek2';
-        gap: 5px;
-      background-color: #2196F3;
-      padding: 10px;
-      
     }
     #prouzky > div{
-        background-color: pink;
-        border: 5px black solid;
-        text-align: center;
         padding: 50px;
         font-size: 26px;
     }
@@ -215,77 +145,24 @@ padding: 75px;
     }
     
     #prouzky > #item3{
-    background-image: url("./Background_Wonder_Stage_Halloween.webp"); /*img v css protoze to jinak protestovalo*/
-    background-repeat: no-repeat;
-    background-size: cover;
     padding: 50px;
     }
     
     /*sekce pro upgrady*/
     #upgrades{
-        display: flex;
-        justify-content: space-evenly;
-        flex-direction: column;
-        margin: auto;
         max-width: 300px;
-        user-select: none;
-    }
-    #basicEmu, #advancedEmu, #superiorEmu, #ultimateEmu{
-        border-radius: 25px;
-        border: solid black 1px;
-        cursor: pointer;
-    }
-    /*pocitace cen*/
-    #priceCounterBasic{
-        font-family: 'Pixelify Sans';
-    }
-    #basicEmuLvlBox{
-        font-size: smaller;
-    }
-    #advancedEmuLvlBox{
-        font-size: smaller;
-    }
-    #superiorEmuLvlBox{
-        font-size: smaller;
     }
 }
-
 @media only screen and (max-width: 600px) {
     #emu{
         max-width: 150px;
         width: 150px;
-       cursor: pointer;
-       z-index: 99;
-       user-select: none;
     }
     #counter{
-        padding: 4px;
-        text-align: center;
         font-size: 32px;
     }
-    .item1{ grid-area: Hlava;;}
-    /*.item2{ grid-area: Prouzek1;}*/
-    #item3{ grid-area: Emu;
-            display: flex;
-            justify-content: center;
-       }
-    .item4{ grid-area: Prouzek2;}
-    #prouzky{
-        display: grid;
-        grid-template-areas:
-        'Hlava Hlava Hlava Hlava Hlava'
-        'Emu Emu Emu Emu Emu'
-        'Emu Emu Emu Emu Emu'
-        'Prouzek2 Prouzek2 Prouzek2 Prouzek2 Prouzek2';
-        gap: 5px;
-      background-color: #2196F3;
-      padding: 5px;
-      
-    }
+   
     #prouzky > div{
-        background-color: pink;
-        border: 5px black solid;
-        text-align: center;
         padding: 50px;
         font-size: 26px;
     }
@@ -293,40 +170,12 @@ padding: 75px;
         padding: 25px;
         font-size: 48px;
     }
-    
     #prouzky > #item3{
-    background-image: url("./Background_Wonder_Stage_Halloween.webp"); /*img v css protoze to jinak protestovalo*/
-    background-repeat: no-repeat;
-    background-size: cover;
     padding: 50px;
     }
     
     /*sekce pro upgrady*/
     #upgrades{
-        display: flex;
-        justify-content: space-evenly;
-        flex-direction: column;
-        margin: auto;
         max-width: 150px;
-        width: 100%;
-        user-select: none;
-    }
-    #basicEmu, #advancedEmu, #superiorEmu, #ultimateEmu{
-        border-radius: 25px;
-        border: solid black 1px;
-        cursor: pointer;
-    }
-    /*pocitace cen*/
-    #priceCounterBasic{
-        font-family: 'Pixelify Sans';
-    }
-    #basicEmuLvlBox{
-        font-size: smaller;
-    }
-    #advancedEmuLvlBox{
-        font-size: smaller;
-    }
-    #superiorEmuLvlBox{
-        font-size: smaller;
     }
 }
