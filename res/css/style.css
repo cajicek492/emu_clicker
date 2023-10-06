@@ -261,6 +261,7 @@ padding: 75px;
     #counter{
         padding: 4px;
         text-align: center;
+        font-size: 32px;
     }
     .item1{ grid-area: Hlava;;}
     /*.item2{ grid-area: Prouzek1;}*/

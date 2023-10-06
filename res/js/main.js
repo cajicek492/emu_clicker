@@ -62,7 +62,7 @@ advancedEmu.onclick = () => {
         advancedEmuLvlBox.innerText = "lvl: " + advancedEmuLvl;
         priceCounterAdvanced.innerText = "Emu: " + costOfAdvacedUpgrade;
         counter.innerText = "Emus: " + numberOfEmus;
-        emuAutoClick += 1;
+        emuAutoClick += 5;
         clearInterval(emuAutoInterval);
         emuAutoInterval = setInterval(() => {
             numberOfEmus += emuAutoClick;
@@ -80,7 +80,7 @@ superiorEmu.onclick = () => {
         superiorEmuLvlBox.innerText = "lvl: " + superiorEmuLvl;
         priceCounterSuperior.innerText = "Quack Emu: " + costOfSuperiorUpgrade;
         counter.innerText = "Emus: " + numberOfEmus;
-        emuSuperiorAutoClick += 10;
+        emuSuperiorAutoClick += 50;
         clearInterval(emuSuperiorAutoInterval);
         emuSuperiorAutoInterval =setInterval(() => {
             numberOfEmus += emuSuperiorAutoClick;
@@ -98,7 +98,7 @@ ultimateEmu.onclick = () => {
         ultimateEmuLvlBox.innerText = "lvl: " + ultimateEmuLvl;
         priceCounterUltimate.innerText = "Tea party Emu: " + costOfUltimateUpgrade;
         counter.innerText = "Emus: " + numberOfEmus;
-        emuUltimateAutoClick += 100;
+        emuUltimateAutoClick += 200;
         clearInterval(upgradeCheck);
         upgradeCheck = setInterval(() => {
             changeSrc();
