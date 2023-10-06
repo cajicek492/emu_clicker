@@ -29,7 +29,7 @@ body{
 }
 .item1{ grid-area: Hlava;;}
 /*.item2{ grid-area: Prouzek1;}*/
-.item3{ grid-area: Emu;
+#item3{ grid-area: Emu;
         display: flex;
         justify-content: center;
    }
@@ -58,7 +58,7 @@ body{
     font-size: 48px;
 }
 
-#prouzky > .item3{
+#prouzky > #item3{
 background-image: url("./Background_Wonder_Stage_Halloween.webp"); /*img v css protoze to jinak protestovalo*/
 background-repeat: no-repeat;
 background-size: cover;
@@ -107,7 +107,7 @@ padding: 75px;
     }
     .item1{ grid-area: Hlava;;}
     /*.item2{ grid-area: Prouzek1;}*/
-    .item3{ grid-area: Emu;
+    #item3{ grid-area: Emu;
             display: flex;
             justify-content: center;
        }
@@ -136,7 +136,7 @@ padding: 75px;
         font-size: 48px;
     }
     
-    #prouzky > .item3{
+    #prouzky > #item3{
     background-image: url("./Background_Wonder_Stage_Halloween.webp"); /*img v css protoze to jinak protestovalo*/
     background-repeat: no-repeat;
     background-size: cover;
@@ -185,7 +185,7 @@ padding: 75px;
     }
     .item1{ grid-area: Hlava;;}
     /*.item2{ grid-area: Prouzek1;}*/
-    .item3{ grid-area: Emu;
+    #item3{ grid-area: Emu;
             display: flex;
             justify-content: center;
        }
@@ -214,7 +214,7 @@ padding: 75px;
         font-size: 48px;
     }
     
-    #prouzky > .item3{
+    #prouzky > #item3{
     background-image: url("./Background_Wonder_Stage_Halloween.webp"); /*img v css protoze to jinak protestovalo*/
     background-repeat: no-repeat;
     background-size: cover;
@@ -265,7 +265,7 @@ padding: 75px;
     }
     .item1{ grid-area: Hlava;;}
     /*.item2{ grid-area: Prouzek1;}*/
-    .item3{ grid-area: Emu;
+    #item3{ grid-area: Emu;
             display: flex;
             justify-content: center;
        }
@@ -294,7 +294,7 @@ padding: 75px;
         font-size: 48px;
     }
     
-    #prouzky > .item3{
+    #prouzky > #item3{
     background-image: url("./Background_Wonder_Stage_Halloween.webp"); /*img v css protoze to jinak protestovalo*/
     background-repeat: no-repeat;
     background-size: cover;
