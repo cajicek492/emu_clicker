@@ -28,8 +28,8 @@ let upgradeCheck;
 let cookieRefresh; // pocet susenek v karte
 let costOfBasicUpgrade = 20; // basic upgrade je na click
 let costOfAdvacedUpgrade = 100;
-let costOfSuperiorUpgrade = 1000;
-let costOfUltimateUpgrade = 10000;
+let costOfSuperiorUpgrade = 1500;
+let costOfUltimateUpgrade = 15000;
 let basicEmuLvl = 1;
 let advancedEmuLvl = 0;
 let superiorEmuLvl = 0;
@@ -81,7 +81,7 @@ superiorEmu.onclick = () => {
         console.log("budeme na prime");
         wonderhoy.play();
         numberOfEmus -= costOfSuperiorUpgrade;
-        costOfSuperiorUpgrade += 1000;
+        costOfSuperiorUpgrade += 1250;
         superiorEmuLvl++;
         superiorEmuLvlBox.innerText = "lvl: " + superiorEmuLvl;
         priceCounterSuperior.innerText = "Quack Emu: " + costOfSuperiorUpgrade;
@@ -100,7 +100,7 @@ ultimateEmu.onclick = () => {
         console.log("perfection");
         wonderhoy.play();
         numberOfEmus -= costOfUltimateUpgrade;
-        costOfUltimateUpgrade += 5000;
+        costOfUltimateUpgrade += 15000;
         ultimateEmuLvl++;
         ultimateEmuLvlBox.innerText = "lvl: " + ultimateEmuLvl;
         priceCounterUltimate.innerText = "Tea party Emu: " + costOfUltimateUpgrade;
