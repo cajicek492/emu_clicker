@@ -57,6 +57,7 @@ body{
         margin: auto;
         width: 100%;
         user-select: none;
+        -webkit-tap-highlight-color: transparent;
     }
     #basicEmu, #advancedEmu, #superiorEmu, #ultimateEmu{
         border-radius: 25px;
