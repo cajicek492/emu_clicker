@@ -63,6 +63,7 @@ body{
         border-radius: 25px;
         border: solid black 1px;
         cursor: pointer;
+        user-select: none;
         -webkit-tap-highlight-color: transparent;
     }
     #basicEmuLvlBox{
