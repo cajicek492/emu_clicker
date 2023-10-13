@@ -13,7 +13,8 @@ const advancedEmuLvlBox = document.getElementById("advancedEmuLvlBox");
 const superiorEmuLvlBox = document.getElementById("superiorEmuLvlBox"); 
 const ultimateEmuLvlBox = document.getElementById("ultimateEmuLvlBox"); 
 const wonderhoy = new Audio("./res/audio/wonderhoy.mp3");
-const titul = document.getElementById("titul"); 
+const titul = document.getElementById("titul");
+const epsDisplay = document.getElementById("epsDisplay");
 
 
 let numberOfEmus = 0;
@@ -24,7 +25,6 @@ let emuUltimateAutoClick = 0;
 let emuAutoInterval;
 let emuSuperiorAutoInterval;
 let emuUltimateAutoInterval;
-let upgradeCheck;
 let cookieRefresh; // pocet susenek v karte
 let costOfBasicUpgrade = 20; // basic upgrade je na click
 let costOfAdvacedUpgrade = 100;
@@ -34,6 +34,7 @@ let basicEmuLvl = 1;
 let advancedEmuLvl = 0;
 let superiorEmuLvl = 0;
 let ultimateEmuLvl = 0;
+let eps = 0;
 
 
 emu.onclick = () => {
@@ -64,6 +65,8 @@ advancedEmu.onclick = () => {
         numberOfEmus -= costOfAdvacedUpgrade;
         costOfAdvacedUpgrade += 200;
         advancedEmuLvl++;
+        eps += 5;
+        epsDisplay.innerText = "Emus per second: " + eps;
         advancedEmuLvlBox.innerText = "lvl: " + advancedEmuLvl;
         priceCounterAdvanced.innerText = "Emu: " + costOfAdvacedUpgrade;
         counter.innerText = "Emus: " + numberOfEmus;
@@ -83,6 +86,8 @@ superiorEmu.onclick = () => {
         numberOfEmus -= costOfSuperiorUpgrade;
         costOfSuperiorUpgrade += 1250;
         superiorEmuLvl++;
+        eps += 50;
+        epsDisplay.innerText = "Emus per second: " + eps;
         superiorEmuLvlBox.innerText = "lvl: " + superiorEmuLvl;
         priceCounterSuperior.innerText = "Quack Emu: " + costOfSuperiorUpgrade;
         counter.innerText = "Emus: " + numberOfEmus;
@@ -102,14 +107,13 @@ ultimateEmu.onclick = () => {
         numberOfEmus -= costOfUltimateUpgrade;
         costOfUltimateUpgrade += 15000;
         ultimateEmuLvl++;
+        eps += 200;
+        epsDisplay.innerText = "Emus per second: " + eps;
         ultimateEmuLvlBox.innerText = "lvl: " + ultimateEmuLvl;
         priceCounterUltimate.innerText = "Tea party Emu: " + costOfUltimateUpgrade;
         counter.innerText = "Emus: " + numberOfEmus;
         emuUltimateAutoClick += 200;
-        clearInterval(upgradeCheck);
-        upgradeCheck = setInterval(() => {
             changeSrc();
-        },1000);
         clearInterval(emuUltimateAutoInterval);
         emuUltimateAutoInterval = setInterval(() => {
             numberOfEmus += emuUltimateAutoClick;
@@ -132,6 +136,11 @@ function changeSrc() {
     emu.src = "./res/img/emu_dance.gif";
  }
 }
+//Bylo planovano ale nakonec ne
+/*function changeSrcBack() {
+    emu.src = "./res/img/chibi_emu.png";
+}*/
+
 // pocet susenek v karte
 function titleCookie() {
     titul.innerText = numberOfEmus + " Emus - Emu Otori Clicker";

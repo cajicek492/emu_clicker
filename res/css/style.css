@@ -18,8 +18,11 @@ body{
     padding: 4px;
     text-align: center;
 }
+#epsDisplay{
+    font-size: small;
+}
 
-.item1{ grid-area: Hlava;;}
+.item1{ grid-area: Hlava;}
 
 #item3{ grid-area: Emu;
         display: flex;
