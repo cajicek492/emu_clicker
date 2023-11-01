@@ -1,188 +1,195 @@
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
-body{
-    background-color: #2196F3;
-    font-family: 'Pixelify Sans', cursive;
+body {
+  background-color: #2196f3;
+  font-family: "Pixelify Sans", cursive;
 }
 
-#emu{
-   cursor: pointer;
-   z-index: 99;
-   user-select: none;
-   -webkit-tap-highlight-color: transparent;
+#emu {
+  cursor: pointer;
+  z-index: 99;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
-#counter{
-    padding: 4px;
-    text-align: center;
+#counter {
+  padding: 4px;
+  text-align: center;
 }
-#epsDisplay{
-    font-size: small;
+#epsDisplay {
+  font-size: small;
 }
 
-.item1{ grid-area: Hlava;}
+.item1 {
+  grid-area: Hlava;
+}
 
-#item3{ grid-area: Emu;
-        display: flex;
-        justify-content: center;
-   }
+#item3 {
+  grid-area: Emu;
+  display: flex;
+  justify-content: center;
+}
 
-.item4{ grid-area: Prouzek2;}
+.item4 {
+  grid-area: Prouzek2;
+}
 
-#prouzky{
-    display: grid;
-    grid-template-areas:
-    'Hlava Hlava Hlava Hlava Hlava'
-    'Emu Emu Emu Emu Emu'
-    'Emu Emu Emu Emu Emu'
-    'Prouzek2 Prouzek2 Prouzek2 Prouzek2 Prouzek2';
-    gap: 5px;
-  background-color: #2196F3;
+#prouzky {
+  display: grid;
+  grid-template-areas:
+    "Hlava Hlava Hlava Hlava Hlava"
+    "Emu Emu Emu Emu Emu"
+    "Emu Emu Emu Emu Emu"
+    "Prouzek2 Prouzek2 Prouzek2 Prouzek2 Prouzek2";
+  gap: 5px;
+  background-color: #2196f3;
   padding: 5px;
-  
 }
-#prouzky > div{
-    background-color: pink;
-    border: 5px black solid;
-    text-align: center;
+#prouzky > div {
+  background-color: pink;
+  border: 5px black solid;
+  text-align: center;
 }
-#prouzky > #item3{
-    background-image: url("./Background_Wonder_Stage_Halloween.webp"); /*img v css protoze to jinak protestovalo*/
-    background-repeat: no-repeat;
-    background-size: cover;
-    }
-    #upgrades{
-        display: flex;
-        justify-content: space-evenly;
-        flex-direction: column;
-        margin: auto;
-        width: 100%;
-        user-select: none;
-        -webkit-tap-highlight-color: transparent;
-    }
-    #basicEmu, #advancedEmu, #superiorEmu, #ultimateEmu{
-        border-radius: 25px;
-        border: solid black 1px;
-        cursor: pointer;
-        user-select: none;
-        -webkit-tap-highlight-color: transparent;
-    }
-    #basicEmuLvlBox{
-        font-size: smaller;
-    }
-    #advancedEmuLvlBox{
-        font-size: smaller;
-    }
-    #superiorEmuLvlBox{
-        font-size: smaller;
-    }
-#signature{
-    user-select: text;
+#prouzky > #item3 {
+  background-image: url("./Background_Wonder_Stage_Halloween.webp"); /*img v css protoze to jinak protestovalo*/
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-#selfpromo{
-    text-decoration: none;
-    color: black;
+#upgrades {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  margin: auto;
+  width: 100%;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
-#selfpromo:hover{
-    text-decoration: underline;
+#basicEmu,
+#advancedEmu,
+#superiorEmu,
+#ultimateEmu {
+  border-radius: 25px;
+  border: solid black 1px;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+#basicEmuLvlBox {
+  font-size: smaller;
+}
+#advancedEmuLvlBox {
+  font-size: smaller;
+}
+#superiorEmuLvlBox {
+  font-size: smaller;
+}
+#signature {
+  user-select: text;
+}
+#selfpromo {
+  text-decoration: none;
+  color: black;
+}
+#selfpromo:hover {
+  text-decoration: underline;
 }
 
 /*responzivita*/
 
 @media only screen and (min-width: 1200px) {
-#emu{
+  #emu {
     max-width: 300px;
     width: 300px;
-}
-#prouzky > div{
+  }
+  #prouzky > div {
     padding: 75px;
     font-size: 35px;
-}
-#prouzky > .item1{
+  }
+  #prouzky > .item1 {
     padding: 25px;
     font-size: 48px;
-}
+  }
 
-#prouzky > #item3{
-padding: 75px;
-}
+  #prouzky > #item3 {
+    padding: 75px;
+  }
 
-/*sekce pro upgrady*/
-#upgrades{
+  /*sekce pro upgrady*/
+  #upgrades {
     max-width: 450px;
+  }
 }
-}
-@media only screen and (max-width: 1199px){
-    #emu{
-        max-width: 250px;
-        width: 250px;
-    }
-    #prouzky > div{
-        padding: 50px;
-        font-size: 26px;
-    }
-    #prouzky > .item1{
-        padding: 25px;
-        font-size: 48px;
-    }
-    
-    #prouzky > #item3{
+@media only screen and (max-width: 1199px) {
+  #emu {
+    max-width: 250px;
+    width: 250px;
+  }
+  #prouzky > div {
     padding: 50px;
-    }
-    
-    /*sekce pro upgrady*/
-    #upgrades{
-        max-width: 400px;
-    }
-}
-@media only screen and (max-width: 992px){
-    #emu{
-        max-width: 200px;
-        width: 200px;
-    }
-    #prouzky > div{
-        padding: 50px;
-        font-size: 26px;
-    }
-    #prouzky > .item1{
-        padding: 25px;
-        font-size: 48px;
-    }
-    
-    #prouzky > #item3{
+    font-size: 26px;
+  }
+  #prouzky > .item1 {
+    padding: 25px;
+    font-size: 48px;
+  }
+
+  #prouzky > #item3 {
     padding: 50px;
-    }
-    
-    /*sekce pro upgrady*/
-    #upgrades{
-        max-width: 300px;
-    }
+  }
+
+  /*sekce pro upgrady*/
+  #upgrades {
+    max-width: 400px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  #emu {
+    max-width: 200px;
+    width: 200px;
+  }
+  #prouzky > div {
+    padding: 50px;
+    font-size: 26px;
+  }
+  #prouzky > .item1 {
+    padding: 25px;
+    font-size: 48px;
+  }
+
+  #prouzky > #item3 {
+    padding: 50px;
+  }
+
+  /*sekce pro upgrady*/
+  #upgrades {
+    max-width: 300px;
+  }
 }
 @media only screen and (max-width: 600px) {
-    #emu{
-        max-width: 150px;
-        width: 150px;
-    }
-    #counter{
-        font-size: 32px;
-    }
-   
-    #prouzky > div{
-        padding: 50px;
-        font-size: 26px;
-    }
-    #prouzky > .item1{
-        padding: 25px;
-        font-size: 48px;
-    }
-    #prouzky > #item3{
+  #emu {
+    max-width: 150px;
+    width: 150px;
+  }
+  #counter {
+    font-size: 32px;
+  }
+
+  #prouzky > div {
     padding: 50px;
-    }
-    
-    /*sekce pro upgrady*/
-    #upgrades{
-        max-width: 150px;
-    }
+    font-size: 26px;
+  }
+  #prouzky > .item1 {
+    padding: 25px;
+    font-size: 48px;
+  }
+  #prouzky > #item3 {
+    padding: 50px;
+  }
+
+  /*sekce pro upgrady*/
+  #upgrades {
+    max-width: 150px;
+  }
 }
